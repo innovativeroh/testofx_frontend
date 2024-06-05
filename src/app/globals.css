@@ -68,9 +68,21 @@
 
   @layer base {
     * {
+      outline: none !important;
       @apply border-border;
     }
     body {
       @apply bg-background text-foreground;
     }
+  }
+
+  #glasshMorph {
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.9);
+  }
+  #gradient {
+    backdrop-filter: blur(13px) saturate(180%);
+    -webkit-backdrop-filter: blur(13px) saturate(180%);
+    background-color: rgba(29, 29, 29, 0.82);
   }
