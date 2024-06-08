@@ -146,9 +146,6 @@ const App: React.FC = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="flex-[2] m-10">
-                      <div className="p-10 border-[1px] border-zinc-800 rounded-xl shadow-xl" id="gradient">h</div>
-                    </div>
                   </div>
                 </div>
               </div>

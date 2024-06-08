@@ -2,7 +2,8 @@ import Image from "next/image";
 import React from "react";
 import Logo from "@/../public/logo.png";
 import DashboardOutlinedIcon from "@mui/icons-material/DashboardOutlined";
-import { AccountBalance, GroupAddOutlined, ModeStandby, MoveUpOutlined, Person2Outlined, Power, SummarizeOutlined, ViewDayOutlined } from "@mui/icons-material";
+import { AccountBalance, GroupAddOutlined, ModeStandby, MoveUpOutlined, SummarizeOutlined, ViewDayOutlined } from "@mui/icons-material";
+import ProfileDropdown from "./extra/ProfileDropdown"; // Adjust the import path if necessary
 
 interface SidebarProps {
   isOpen: boolean;
@@ -53,13 +54,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
                 >
                   <DashboardOutlinedIcon className="text-white" /> <span>Dashboard</span>
                 </a>
-                <a
-                  href="/"
-                  className="flex justify-start gap-5 hover:border-[1px] hover:border-white rounded-lg p-3 border-[1px] border-transparent"
-                  onClick={toggleSidebar}
-                >
-                  <Person2Outlined className="text-orange-500" /> <span>Profile</span>
-                </a>
+                <ProfileDropdown />
                 <a
                   href="/"
                   className="flex justify-start gap-5 hover:border-[1px] hover:border-white rounded-lg p-3 border-[1px] border-transparent"
