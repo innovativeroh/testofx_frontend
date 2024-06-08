@@ -28,20 +28,7 @@ const App: React.FC = () => {
                 onClick={toggleSidebar}
                 className="md:hidden mb-4 focus:outline-none"
               >
-                <svg
-                  className="h-6 w-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
+                
               </button>
               <div>
                 <nav>
@@ -54,14 +41,14 @@ const App: React.FC = () => {
                   </Link>
                 </nav>
                 <div className="mt-4 w-full">
-                  <div className="flex gap-10 justify-between">
+                  <div className="flex gap-10 justify-between flex-col lg:flex-row">
                     <div className="flex-[4]">
                       <h1 className="mb-4 font-bold text-white text-3xl">
                         <AccountTreeOutlinedIcon className="text-3xl" /> Partner
                         Bonuses
                       </h1>
                       <br />
-                      <div className="grid grid-cols-3 gap-5">
+                      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
                         <div
                           id="gradient"
                           className="w-full bg-rounded p-8 text-white border-[1px] border-zinc-800 rounded-xl shadow-xl"
