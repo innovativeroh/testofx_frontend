@@ -2,8 +2,15 @@ import Image from "next/image";
 import React from "react";
 import Logo from "@/../public/logo.png";
 import DashboardOutlinedIcon from "@mui/icons-material/DashboardOutlined";
-import { AccountBalance, GroupAddOutlined, ModeStandby, MoveUpOutlined, SummarizeOutlined, ViewDayOutlined } from "@mui/icons-material";
 import ProfileDropdown from "./extra/ProfileDropdown"; // Adjust the import path if necessary
+import TeamReportDropdown from "./extra/TeamReportDropdown";
+import DepositDropdown from "./extra/DepositDropdown";
+import IncomesReportDropdown from "./extra/IncomesReportDropdown";
+import TransferDropdown from "./extra/TransferDropdown";
+import ActivateDropdown from "./extra/ActivateDropdown";
+import LeaderboardDropdown from "./extra/LeaderBoardDropdown";
+import WithdrawDropdown from "./extra/WithdrawDropdown";
+import LogoutDropdown from "./extra/LogOutDropdown";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -55,55 +62,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
                   <DashboardOutlinedIcon className="text-white" /> <span>Dashboard</span>
                 </a>
                 <ProfileDropdown />
-                <a
-                  href="/"
-                  className="flex justify-start gap-5 hover:border-[1px] hover:border-white rounded-lg p-3 border-[1px] border-transparent"
-                  onClick={toggleSidebar}
-                >
-                  <ViewDayOutlined className="text-blue-500" /> <span>Deposit</span>
-                </a>
-                <a
-                  href="/"
-                  className="flex justify-start gap-5 hover:border-[1px] hover:border-white rounded-lg p-3 border-[1px] border-transparent"
-                  onClick={toggleSidebar}
-                >
-                  <MoveUpOutlined className="text-purple-500" /> <span>Transfer</span>
-                </a>
-                <a
-                  href="/"
-                  className="flex justify-start gap-5 hover:border-[1px] hover:border-white rounded-lg p-3 border-[1px] border-transparent"
-                  onClick={toggleSidebar}
-                >
-                  <ModeStandby className="text-red-500" /> <span>Active</span>
-                </a>
-                <a
-                  href="/"
-                  className="flex justify-start gap-5 hover:border-[1px] hover:border-white rounded-lg p-3 border-[1px] border-transparent"
-                  onClick={toggleSidebar}
-                >
-                  <SummarizeOutlined className="text-green-500" /> <span>Income Report</span>
-                </a>
-                <a
-                  href="/"
-                  className="flex justify-start gap-5 hover:border-[1px] hover:border-white rounded-lg p-3 border-[1px] border-transparent"
-                  onClick={toggleSidebar}
-                >
-                  <GroupAddOutlined className="text-yellow-500" /> <span>Team Report</span>
-                </a>
-                <a
-                  href="/"
-                  className="flex justify-start gap-5 hover:border-[1px] hover:border-white rounded-lg p-3 border-[1px] border-transparent"
-                  onClick={toggleSidebar}
-                >
-                  <AccountBalance className="text-cyan-500" /> <span>Withdraw</span>
-                </a>
-                <a
-                  href="/"
-                  className="flex justify-start gap-5 hover:border-[1px] hover:border-white rounded-lg p-3 border-[1px] border-transparent"
-                  onClick={toggleSidebar}
-                >
-                  <ViewDayOutlined className="text-blue-900" /> <span>Leaderboard</span>
-                </a>
+                <DepositDropdown />
+                <TransferDropdown />
+                <ActivateDropdown />
+                <IncomesReportDropdown />
+                <TeamReportDropdown />
+                <WithdrawDropdown />
+                <LeaderboardDropdown />
+                <LogoutDropdown />
               </li>
             </ul>
           </div>

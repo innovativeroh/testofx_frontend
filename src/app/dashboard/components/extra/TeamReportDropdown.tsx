@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { ExpandMore, ExpandLess, Person2Outlined } from "@mui/icons-material";
+import { ExpandMore, ExpandLess, GroupAddOutlined } from "@mui/icons-material";
 
-const ProfileDropdown: React.FC = () => {
+const TeamReportDropdown: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -15,39 +15,31 @@ const ProfileDropdown: React.FC = () => {
         className="flex justify-between items-center w-full p-3 border-[1px] border-transparent hover:border-white rounded-lg"
       >
         <div className="flex items-center gap-5">
-          <Person2Outlined className="text-orange-500" />
-          <span>Profile</span>
+          <GroupAddOutlined className="text-yellow-500" />
+          <span>Teams Report</span>
         </div>
         {isOpen ? <ExpandLess /> : <ExpandMore />}
       </button>
       {isOpen && (
         <div className="absolute left-0 top-full mt-2 w-full z-10 border-[1px] border-zinc-800" id="gradient">
           <a
-            href="/dashboard/profile/general"
+            href="/dashboard/team/directteam"
             className="transition block p-3 hover:bg-blue-950"
             onClick={() => setIsOpen(false)}
           >
-            General
+            Direct Team
           </a>
           <a
-            href="/dashboard/profile/change"
+            href="/dashboard/team/totalteam"
             className="transition block p-3 hover:bg-blue-950"
             onClick={() => setIsOpen(false)}
           >
-            Change Password
+            Total Team
           </a>
-          <a
-            href="/dashboard/profile/txnchange"
-            className="transition block p-3 hover:bg-blue-950"
-            onClick={() => setIsOpen(false)}
-          >
-            Change Txn Password
-          </a>
-
         </div>
       )}
     </div>
   );
 };
 
-export default ProfileDropdown;
+export default TeamReportDropdown;

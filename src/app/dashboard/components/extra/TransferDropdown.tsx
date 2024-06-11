@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { ExpandMore, ExpandLess, Person2Outlined } from "@mui/icons-material";
+import { ExpandMore, ExpandLess, MoveUpOutlined } from "@mui/icons-material";
 
-const ProfileDropdown: React.FC = () => {
+const TransferDropdown: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -15,33 +15,33 @@ const ProfileDropdown: React.FC = () => {
         className="flex justify-between items-center w-full p-3 border-[1px] border-transparent hover:border-white rounded-lg"
       >
         <div className="flex items-center gap-5">
-          <Person2Outlined className="text-orange-500" />
-          <span>Profile</span>
+          <MoveUpOutlined className="text-purple-500" />
+          <span>Transfer</span>
         </div>
         {isOpen ? <ExpandLess /> : <ExpandMore />}
       </button>
       {isOpen && (
         <div className="absolute left-0 top-full mt-2 w-full z-10 border-[1px] border-zinc-800" id="gradient">
           <a
-            href="/dashboard/profile/general"
+            href="/dashboard/transfer/maintofund"
             className="transition block p-3 hover:bg-blue-950"
             onClick={() => setIsOpen(false)}
           >
-            General
+            Main To Fund
           </a>
           <a
-            href="/dashboard/profile/change"
+            href="/dashboard/transfer/fundtofund"
             className="transition block p-3 hover:bg-blue-950"
             onClick={() => setIsOpen(false)}
           >
-            Change Password
+            Fund To Fund
           </a>
           <a
-            href="/dashboard/profile/txnchange"
+            href="/dashboard/transfer/transferhistory"
             className="transition block p-3 hover:bg-blue-950"
             onClick={() => setIsOpen(false)}
           >
-            Change Txn Password
+            Transfer History
           </a>
 
         </div>
@@ -50,4 +50,4 @@ const ProfileDropdown: React.FC = () => {
   );
 };
 
-export default ProfileDropdown;
+export default TransferDropdown;

@@ -33,58 +33,36 @@ const page = () => {
                   </Link>
                   <span className="pr-2 pl-2 text-zinc-200">/</span>
                   <Link href="/" className="text-sm text-white">
-                    Profile
+                    Transfer
                   </Link>
                 </nav>
                 <div className="mt-4 w-full">
                   <div className="flex gap-10 justify-between flex-col lg:flex-row">
                     <div className="flex-[4]">
                       <h1 className="mb-4 font-bold text-white text-3xl">
-                        General Profile
+                        Main to Fund
                       </h1>
                       <br />
-                      <div className="m-auto max-w-[600px] p-8 rounded-lg border-[1px] shadow-md shadow-zinc-300 border-gray-400">
-                        <h3 className="text-white font-semibold text-xl text-center">
-                          Profile Details
+                      <div className="m-auto max-w-[600px] p-8 rounded-lg border-[1px] text-center shadow-md shadow-zinc-300 border-gray-400">
+                        <h3 className="text-white font-semibold text-xl mb-5">
+                          Main Transfer
                         </h3>
-                        <div className="mt-4">
-                          <span className="text-zinc-200 font-semibold text-m">
-                            Sponsor Id
+                        <h3 className="text-white font-semibold text-lg">
+                          Available Main Bal: $0.000000
+                        </h3>
+                        <h3 className="text-white font-semibold text-lg">
+                            Available Fund Bal: $0.00
+                        </h3>
+                          <span className="text-zinc-200 font-semibold text-m mt-4 block text-left">
+                            Amount
                           </span>
                           <input
-                            type="text"
-                            name="sponsorid"
-                            placeholder="FX1182"
+                            type="number"
+                            name="amount"
+                            placeholder="Enter Amount($)"
                             className="w-full mt-2 p-2 bg-zinc-900 border-[1px] border-zinc-800 shadow-xl rounded-lg text-white"
                           />
-                          <span className="text-zinc-200 font-semibold text-m mt-4 block">
-                            User Id
-                          </span>
-                          <input
-                            type="text"
-                            name="userid"
-                            placeholder="FX1182"
-                            className="w-full mt-2 p-2 bg-zinc-900 border-[1px] border-zinc-800 shadow-xl rounded-lg text-white"
-                          />
-                          <span className="text-zinc-200 font-semibold text-m mt-4 block">
-                            Name
-                          </span>
-                          <input
-                            type="text"
-                            name="Name"
-                            placeholder="Rohan"
-                            className="w-full mt-2 p-2 bg-zinc-900 border-[1px] border-zinc-800 shadow-xl rounded-lg text-white"
-                          />
-                          <span className="text-zinc-200 font-semibold text-m mt-4 block">
-                            BEP20 Address
-                          </span>
-                          <input
-                            type="address"
-                            name="BEP20Address"
-                            placeholder="BEP20 Address"
-                            className="w-full mt-2 p-2 bg-zinc-900 border-[1px] border-zinc-800 shadow-xl rounded-lg text-white"
-                          />
-                          <span className="text-zinc-200 font-semibold text-m mt-4 block">
+                          <span className="text-zinc-200 font-semibold text-m mt-4 block text-left">
                             Transaction Password
                           </span>
                           <input
@@ -96,11 +74,11 @@ const page = () => {
                           <div className="flex justify-center">
                             <button
                               type="submit"
-                              className="transition hover:bg-blue-400 bg-blue-900 text-white font-semibold w-auto p-2 rounded-xl shadow-xl mt-4">
-                              Update
+                              className="transition hover:bg-blue-400 bg-blue-900 text-white font-semibold w-auto p-2 rounded-xl shadow-xl mt-4"
+                            >
+                              Transfer
                             </button>
                           </div>
-                        </div>
                       </div>
                     </div>
                   </div>

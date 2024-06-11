@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { ExpandMore, ExpandLess, Person2Outlined } from "@mui/icons-material";
+import { ExpandMore, ExpandLess, ModeStandby } from "@mui/icons-material";
 
-const ProfileDropdown: React.FC = () => {
+const ActivateDropdown: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -15,33 +15,26 @@ const ProfileDropdown: React.FC = () => {
         className="flex justify-between items-center w-full p-3 border-[1px] border-transparent hover:border-white rounded-lg"
       >
         <div className="flex items-center gap-5">
-          <Person2Outlined className="text-orange-500" />
-          <span>Profile</span>
+        <ModeStandby className="text-red-500" />
+          <span>Activate</span>
         </div>
         {isOpen ? <ExpandLess /> : <ExpandMore />}
       </button>
       {isOpen && (
         <div className="absolute left-0 top-full mt-2 w-full z-10 border-[1px] border-zinc-800" id="gradient">
           <a
-            href="/dashboard/profile/general"
+            href="/dashboard/activate/activatenow"
             className="transition block p-3 hover:bg-blue-950"
             onClick={() => setIsOpen(false)}
           >
-            General
+            Activate Now
           </a>
           <a
-            href="/dashboard/profile/change"
+            href="/dashboard/activate/activatehistory"
             className="transition block p-3 hover:bg-blue-950"
             onClick={() => setIsOpen(false)}
           >
-            Change Password
-          </a>
-          <a
-            href="/dashboard/profile/txnchange"
-            className="transition block p-3 hover:bg-blue-950"
-            onClick={() => setIsOpen(false)}
-          >
-            Change Txn Password
+            Activate History
           </a>
 
         </div>
@@ -50,4 +43,4 @@ const ProfileDropdown: React.FC = () => {
   );
 };
 
-export default ProfileDropdown;
+export default ActivateDropdown;
